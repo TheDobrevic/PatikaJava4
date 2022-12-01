@@ -1,17 +1,14 @@
 import java.util.Scanner;
-public class Taximeter {
-    public static void main (String[] args){
-        double kilometer,perKm=2.20, taxiMeter;
-        int startPrice=10;
-
+public class CircleArea {
+    public static void main (String[]args){
         Scanner input=new Scanner(System.in);
-        System.out.print("Enter the distance (km):");
-
-        kilometer = input.nextDouble();
-        taxiMeter=kilometer*perKm ;
-        taxiMeter += startPrice;
-
-        taxiMeter= (taxiMeter<20) ? 20 : taxiMeter ;
-        System.out.print("Taksimeter Fare:" + taxiMeter+ " TL");
+        int radius,centralAngle;
+        double PI=3.14,area;
+        System.out.print("Dairenin yari capi:");
+        radius=input.nextInt();
+        System.out.print("Dairenin merkez acisi:");
+        centralAngle=input.nextInt();
+        area=(PI*(radius*radius)*centralAngle)/360;
+        System.out.print("Alan: "+area);
     }
 }
